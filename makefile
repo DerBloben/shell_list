@@ -2,7 +2,7 @@ cc = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = shell
 
-SRCS = main.c task.c utilis.c
+SRCS = main.c task.c utilis.c 
 OBJS = $(SRCS:.c=.o)
 
 

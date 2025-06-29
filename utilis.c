@@ -4,6 +4,15 @@
 #include "task.h"
 #include "utilis.h"
 
+void menu(void)
+{
+	ft_putstr("\n--- MENU ---\n");
+	ft_putstr("Que souhaitez vous faire\n");
+	ft_putstr("1 - Ajouter une tache\n");
+	ft_putstr("2 - Supprimer une tache\n");
+	ft_putstr("3 - Afficher les taches\n");
+	ft_putstr("4 - Quitter\n");
+}
 char *get_input(char *buffer, int size)
 {
 	int i = 0;

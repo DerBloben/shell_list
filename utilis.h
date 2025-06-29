@@ -8,6 +8,6 @@ void ft_putchar(char c);
 char *ft_strcpy(char *dest, const char *src);
 int ft_strcmp(const char *a, const char *b);
 void ft_putnbr(int n);
-
+void menu(void);
 
 #endif

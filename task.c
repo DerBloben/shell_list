@@ -49,6 +49,7 @@ void display_task(t_task *list)
 		tmp = tmp->next;
 		i++;
 	}
+	
 }
 
 void free_tasks(t_task **list)
@@ -64,3 +65,42 @@ void free_tasks(t_task **list)
 	*list = NULL;
 }
 		
+int remove_task(t_task **list, t_task *task)
+{
+	t_task *tmp = *list;
+	t_task *prev = NULL;
+	if(!tmp)
+	{
+		ft_putstr("aucune tache à supprimer\n");
+		return 0;
+	}
+	while(tmp)
+	{
+		if(ft_strcmp(tmp->name,task->name)==0)
+		{
+		if(prev == NULL)
+			*list = tmp->next;
+		else
+			prev->next=tmp->next;
+
+		free(tmp->name);
+		free(tmp);
+		return 1;	
+		}
+
+		prev = tmp;
+		tmp=tmp->next;
+	}
+	ft_putstr("la tache n'a pas été trouvée\n");
+	return 0;
+}
+t_task *find_task(t_task *list,char *name)
+{
+	while(list)
+	{
+		if(ft_strcmp(list->name,name)==0)
+			return list;
+		list = list->next;
+	}
+	return NULL;
+}

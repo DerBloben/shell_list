@@ -14,6 +14,8 @@ void add_task(t_task **list, t_task *new_task);
 
 void display_task(t_task *list);
 void free_tasks(t_task **list);
+int remove_task(t_task **list, t_task *task);
+t_task *find_task(t_task *list,char *name);
 
 #endif
 
